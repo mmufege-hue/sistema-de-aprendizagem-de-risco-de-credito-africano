@@ -1,4 +1,8 @@
 import streamlit as st
+
+if "dataset" not in st.session_state:
+    st.session_state["dataset"] = None
+import streamlit as st
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LogisticRegression
@@ -131,3 +135,7 @@ elif menu == "🔍 Explicar Modelo":
         Aqui explica-se automaticamente o impacto de cada variável.
         (A versão completa terá SHAP, WOE e gráficos avançados.)
         """)
+
+        st.title("CreditMasterLab")
+        st.write("Bem‑vindo ao Laboratório de Crédito...")
+        st.write("Use a barra lateral para navegar.")
