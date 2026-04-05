@@ -46,11 +46,12 @@ if st.button("Gerar PDF"):
 
     # PSI
     if uploaded:
-        psi_table, psi_val = calculate_psi(
-            base_values=df[woe_vars[0]],
-            new_values=new_df[woe_vars[0]],
-            bins=10
-        )
+    # Usar a mesma variável selecionada para o PSI
+    psi_table, psi_val = calculate_psi(
+        base_values=df[feature],
+        new_values=new_df[feature],
+        bins=10
+    )
     else:
         psi_table = pd.DataFrame()
         psi_val = 0.0
